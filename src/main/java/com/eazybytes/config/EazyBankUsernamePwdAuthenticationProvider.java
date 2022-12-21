@@ -36,7 +36,7 @@ public class EazyBankUsernamePwdAuthenticationProvider implements Authentication
                 authorities.add(new SimpleGrantedAuthority(customer.get(0).getRole()));
                 return new UsernamePasswordAuthenticationToken(username, pwd, authorities);
             } else {
-                throw new BadCredentialsException("Invalid password");
+                throw new BadCredentialsException("Invalid password!");
             }
         }else {
             throw new BadCredentialsException("No user registered with this details!");
