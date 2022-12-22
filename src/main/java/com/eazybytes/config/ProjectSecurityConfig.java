@@ -44,7 +44,7 @@ public class ProjectSecurityConfig {
             }
         /**
          *  From Spring Security 6, by default the CSRF Cookie that got generated during intial login will not be shared to UI application.
-         *  The developer has to write logic to read the CSRF token and send it as part of the response. When framework sees the
+         *  The developer has              write logic to read the CSRF token and send it as part of the response. When framework sees the
          *  CSRF token in the response header, it takes of sending the same as Cookie as well. For the same, I have created
          *  a filter with the name CsrfCookieFilter and configured the same to run every time after the Spring Security in built filter
          *  BasicAuthenticationFilter like shown below. More details about Filters, are discussed inside the Section 8 of the course.
