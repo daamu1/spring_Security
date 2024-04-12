@@ -1,5 +1,4 @@
 package com.eazybytes.config;
-
 import com.eazybytes.model.Authority;
 import com.eazybytes.model.Customer;
 import  java.util.Set;
@@ -45,9 +44,6 @@ public class EazyBankUsernamePwdAuthenticationProvider implements Authentication
         }
 
     }
-
-
-
 
     @Override
     public boolean supports(Class<?> authentication) {
