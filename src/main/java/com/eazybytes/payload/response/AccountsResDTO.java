@@ -1,4 +1,4 @@
-package com.eazybytes.paylaod.response;
+package com.eazybytes.payload.response;
 
 import lombok.*;
 

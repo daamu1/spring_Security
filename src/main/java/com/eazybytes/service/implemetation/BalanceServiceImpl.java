@@ -1,7 +1,7 @@
 package com.eazybytes.service.implemetation;
 
 import com.eazybytes.model.AccountTransactions;
-import com.eazybytes.paylaod.response.AccountTransactionsResDTO;
+import com.eazybytes.payload.response.AccountTransactionsResDTO;
 import com.eazybytes.repository.AccountTransactionsRepository;
 import com.eazybytes.service.BalanceService;
 import lombok.RequiredArgsConstructor;

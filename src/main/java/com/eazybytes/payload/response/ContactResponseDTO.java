@@ -1,4 +1,4 @@
-package com.eazybytes.paylaod.request;
+package com.eazybytes.payload.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ContactRequestDTO {
+public class ContactResponseDTO {
     private String contactId;
     private String contactName;
     private String contactEmail;

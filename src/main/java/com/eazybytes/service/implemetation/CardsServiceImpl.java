@@ -2,7 +2,7 @@ package com.eazybytes.service.implemetation;
 
 import com.eazybytes.model.Cards;
 import com.eazybytes.repository.CardsRepository;
-import com.eazybytes.paylaod.response.CardsResDTO;
+import com.eazybytes.payload.response.CardsResDTO;
 import com.eazybytes.service.CardsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

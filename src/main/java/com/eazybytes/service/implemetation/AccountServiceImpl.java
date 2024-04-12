@@ -2,7 +2,7 @@ package com.eazybytes.service.implemetation;
 
 import com.eazybytes.exception.CustomerNotFoundException;
 import com.eazybytes.model.Accounts;
-import com.eazybytes.paylaod.response.AccountsResDTO;
+import com.eazybytes.payload.response.AccountsResDTO;
 import com.eazybytes.repository.AccountsRepository;
 import com.eazybytes.service.AccountService;
 import lombok.RequiredArgsConstructor;

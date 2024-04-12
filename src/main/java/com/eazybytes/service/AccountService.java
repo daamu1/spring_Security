@@ -1,7 +1,6 @@
 package com.eazybytes.service;
 
-import com.eazybytes.model.Accounts;
-import com.eazybytes.paylaod.response.AccountsResDTO;
+import com.eazybytes.payload.response.AccountsResDTO;
 
 public interface AccountService {
     AccountsResDTO getAccountByCustomerId(int customerId);

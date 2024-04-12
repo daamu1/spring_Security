@@ -1,6 +1,6 @@
 package com.eazybytes.controller;
 
-import com.eazybytes.paylaod.response.CardsResDTO;
+import com.eazybytes.payload.response.CardsResDTO;
 import com.eazybytes.service.CardsService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

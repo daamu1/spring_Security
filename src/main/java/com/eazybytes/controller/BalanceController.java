@@ -1,6 +1,6 @@
 package com.eazybytes.controller;
 
-import com.eazybytes.paylaod.response.AccountTransactionsResDTO;
+import com.eazybytes.payload.response.AccountTransactionsResDTO;
 import com.eazybytes.service.BalanceService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
