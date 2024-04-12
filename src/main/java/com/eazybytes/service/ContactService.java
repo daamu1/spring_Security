@@ -1,8 +1,9 @@
 package com.eazybytes.service;
 
 
-import com.eazybytes.payload.response.ContactResponseDTO;
+import com.eazybytes.payload.request.ContactRequestDTO;
+import com.eazybytes.payload.response.ContactResDTO;
 
 public interface ContactService {
-    ContactResponseDTO saveContactInquiryDetails(com.eazybytes.payload.request.ContactRequestDTO contactDTO);
+    ContactResDTO saveContactInquiryDetails(ContactRequestDTO contactDTO);
 }

@@ -1,12 +1,11 @@
 package com.eazybytes.service.implemetation;
 
 import com.eazybytes.model.Contact;
-import com.eazybytes.payload.response.ContactResponseDTO;
+import com.eazybytes.payload.response.ContactResDTO;
 import com.eazybytes.payload.request.*;
 import com.eazybytes.repository.ContactRepository;
 import com.eazybytes.service.ContactService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Date;
@@ -19,7 +18,7 @@ public class ContactServiceImpl implements ContactService {
     private final ContactRepository contactRepository;
 
     @Override
-    public ContactResponseDTO saveContactInquiryDetails(ContactRequestDTO contactDTO) {
+    public ContactResDTO saveContactInquiryDetails(ContactRequestDTO contactDTO) {
         Random random = new Random();
         String serviceReqNumber = "SR" + (random.nextInt(999999999 - 9999) + 9999);
 
@@ -34,7 +33,7 @@ public class ContactServiceImpl implements ContactService {
 
         contact = contactRepository.save(contact);
 
-        return new ContactResponseDTO(
+        return new ContactResDTO(
                 contact.getContactId(),
                 contact.getContactName(),
                 contact.getContactEmail(),

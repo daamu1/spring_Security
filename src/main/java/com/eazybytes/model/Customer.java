@@ -1,7 +1,5 @@
 package com.eazybytes.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -23,13 +21,14 @@ public class Customer {
 
     @Column(name = "customer_name")
     private String name;
+
     @Column(name = "customer_email")
     private String email;
 
     @Column(name = "mobile_number")
     private String mobileNumber;
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @Column(name = "passcode")
     private String pwd;
 
     @Column(name = "customer_role")
@@ -38,7 +37,6 @@ public class Customer {
     @Column(name = "create_dt")
     private String createDt;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
     private Set<Authority> authorities;
 }
