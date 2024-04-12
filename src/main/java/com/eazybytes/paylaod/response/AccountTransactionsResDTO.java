@@ -9,7 +9,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class AccountTransactionsDTO {
+public class AccountTransactionsResDTO {
 
     private String transactionId;
     private long accountNumber;
