@@ -24,7 +24,7 @@ public class BalanceController {
      * @param id The customer ID for whom to retrieve transaction details.
      * @return ResponseEntity containing either the list of transactions or a No Content status
      */
-    @GetMapping("/myBalance")
+    @GetMapping("/balances")
     public ResponseEntity<List<AccountTransactionsResDTO>> getBalanceDetails(@RequestParam int id) {
         return Optional.ofNullable(balanceService.getBalanceDetails(id))
                 .filter(notEmpty -> !notEmpty.isEmpty())

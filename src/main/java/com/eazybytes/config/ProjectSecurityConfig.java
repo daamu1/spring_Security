@@ -47,13 +47,16 @@ public class ProjectSecurityConfig {
                     config.setAllowedHeaders(Collections.singletonList("*"));
                     config.setMaxAge(3600L);
                     return config;
-                }).and().csrf().ignoringRequestMatchers("/contact","/register")
+                })
+                .and()
+                .csrf()
+                .ignoringRequestMatchers("/contact", "/register")
                 .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
                 .and()
                 .addFilterAfter(new CsrfCookieFilter(), BasicAuthenticationFilter.class)
                 .authorizeHttpRequests()
-                        .requestMatchers("/accounts/**","/myBalance","/myLoans","/myCards", "/user").authenticated()
-                        .requestMatchers("/notices","/contact","/register").permitAll()
+                .requestMatchers("/accounts/**", "/balances", "/loans", "/cards", "/user").authenticated()
+                .requestMatchers("/notices", "/contact", "/register").permitAll()
                 .and().formLogin()
                 .and().httpBasic();
         return http.build();
