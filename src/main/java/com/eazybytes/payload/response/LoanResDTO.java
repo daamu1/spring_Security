@@ -10,7 +10,6 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 public class LoanResDTO {
-
     private int loanNumber;
     private int customerId;
     private Date startDt;
@@ -19,6 +18,4 @@ public class LoanResDTO {
     private int amountPaid;
     private int outstandingAmount;
     private String createDt;
-
-    // Constructor, getters, and setters
 }
