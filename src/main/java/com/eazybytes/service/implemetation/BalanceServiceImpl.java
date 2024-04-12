@@ -20,9 +20,17 @@ public class BalanceServiceImpl implements BalanceService {
     public List<AccountTransactionsDTO> getBalanceDetails(int customerId) {
         List<AccountTransactions> transactions = accountTransactionsRepository.findByCustomerIdOrderByTransactionDtDesc(customerId);
         return transactions.stream()
-                .map(transaction -> new AccountTransactionsDTO(transaction.getCustomerId(),
+                .map(transaction -> new AccountTransactionsDTO(
+                        transaction.getTransactionId(),
+                        transaction.getAccountNumber(),
+                        transaction.getCustomerId(),
                         transaction.getTransactionDt(),
-                        transaction.getTransactionAmt()))
+                        transaction.getTransactionSummary(),
+                        transaction.getTransactionType(),
+                        transaction.getTransactionAmt(),
+                        transaction.getClosingBalance(),
+                        transaction.getCreateDt()
+                ))
                 .collect(Collectors.toList());
     }
 }

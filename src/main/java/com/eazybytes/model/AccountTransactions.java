@@ -45,5 +45,5 @@ public class AccountTransactions {
 	private int closingBalance;
 
 	@Column(name = "create_dt", nullable = false)
-	private String createDt;
+	private Date createDt;
 }
